@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #6853a5;
+}
+  
+.nav {
+  overflow: hidden;
+  background-color: hsl(240, 13%, 60%);
+}
+
+.nav a {
+  float: left;
+  display: block;
+  color: hsl(0, 72%, 52%);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav a:hover {
+  background-color: hsl(147, 78%, 82%);
+  color: black;
+}
+
+.nav a.active {
+  background-color: hsl(152, 50%, 44%);
+  color: white;
+}
+
+.nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon 
+  {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
